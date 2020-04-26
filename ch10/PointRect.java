@@ -61,8 +61,8 @@ public class PointRect {
      * Moves a Rectangle by modifying the x and y attributes.
      */
     public static void moveRect(Rectangle box, int dx, int dy) {
-        box.x = box.x + dx;
-        box.y = box.y + dy;
+        box.x += dx;
+        box.y += dy;
     }
 
     /**

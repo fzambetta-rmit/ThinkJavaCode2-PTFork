@@ -13,7 +13,7 @@ public class Max {
 
         if (args.length == 0) {
             System.err.println("Usage: java Max <numbers>");
-            return;
+            System.exit(-1);
         }
 
         int max = Integer.MIN_VALUE;

@@ -10,7 +10,11 @@ public class ArrayExamples {
      */
     public static void main(String[] args) {
         int size = 10;
-        int[] counts = new int[4];
+        
+        int[] counts;
+        counts = new int[4];
+
+
         double[] values = new double[size];
 
         counts[0] = 7;
@@ -63,6 +67,9 @@ public class ArrayExamples {
         System.out.println("total = " + total);
     }
 
+
+  
+
     /**
      * Prints the elements of an array.
      */
@@ -95,6 +102,15 @@ public class ArrayExamples {
             total += a[i];
         }
         return total;
+    }
+
+
+    public int[] randomArray(int size) 
+    {
+        int[] a = new int [size];
+        // .....
+
+        return a;
     }
 
 }

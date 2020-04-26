@@ -5,6 +5,7 @@ public class TimeClient {
 
     public static void main(String[] args) {
         Time time = new Time(11, 59, 59.9);
+        
         System.out.println(time);
 
         // cannot access private variables from another class
@@ -21,6 +22,7 @@ public class TimeClient {
         System.out.println(time1 == time3);
         System.out.println(time1.equals(time2));
         System.out.println(time1.equals(time3));
+        System.out.println(time1.equals("09:30:00.0\n"));
 
         Time startTime = new Time(18, 50, 0.0);
         Time runningTime = new Time(2, 16, 0.0);
