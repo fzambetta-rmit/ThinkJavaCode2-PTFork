@@ -4,7 +4,7 @@ public class Arrays2D
 { 
     private int[][] intTable = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } }; 
     private double[][] doubleTable = { { 1.1, 2.2, 3.3 }, { 4.4, 5.5, 6.6 }, { 7.7, 8.8, 9.9 } }; 
-    private String stringTable[][] = {{"Apple", "Banana"}, {"Cheesecake", "Black Forest", "Panettone"}};
+    private String stringTable[][] = { {"Apple", "Banana"}, {"Cheesecake", "Black Forest", "Panettone"} };
 
     private void printIntArray()
     {

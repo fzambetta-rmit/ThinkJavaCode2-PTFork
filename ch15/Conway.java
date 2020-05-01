@@ -3,6 +3,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+
 /**
  * Conway's Game of Life.
  */
@@ -12,15 +14,13 @@ public class Conway extends Automaton {
      * Creates a grid with a Blinker and a Glider.
      */
     public Conway() {
-        grid = new GridCanvas(30, 25, SIZE);
-        grid.turnOn(1, 2);
+        grid = new GridCanvas(5, 10, 20);
+        grid.turnOn(2, 1);
         grid.turnOn(2, 2);
-        grid.turnOn(3, 2);
-        grid.turnOn(6, 1);
-        grid.turnOn(7, 2);
-        grid.turnOn(7, 3);
-        grid.turnOn(8, 1);
-        grid.turnOn(8, 2);
+        grid.turnOn(2, 3);
+        grid.turnOn(1, 7);
+        grid.turnOn(2, 7);
+        grid.turnOn(3, 7);
     }
 
     /**
@@ -165,14 +165,42 @@ public class Conway extends Automaton {
     }
 
     /**
+     * Executes the game main loop
+     */
+    private void mainloop() {
+        while (true) {
+            this.update();
+            grid.repaint();
+            
+            try {
+                    Thread.sleep(500);
+            } catch (InterruptedException e) {}
+        }
+    }
+
+
+    /**
      * Creates and runs the simulation.
      * 
      * @param args command-line arguments
      */
     public static void main(String[] args) {
+        
+        String title = "Conway's Game of Life";
+        Conway game = new Conway();
+        JFrame frame = new JFrame(title);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
+        frame.add(game.grid);
+        frame.pack();
+        frame.setVisible(true);
+        game.mainloop();
+        
+        /*
         String title = "Conway's Game of Life";
         Conway game = new Conway("pulsar.cells", 2);
         game.run(title, 2);
+        */
     }
 
 }
