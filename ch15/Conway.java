@@ -185,7 +185,7 @@ public class Conway extends Automaton {
      * @param args command-line arguments
      */
     public static void main(String[] args) {
-        
+        /*
         String title = "Conway's Game of Life";
         Conway game = new Conway();
         JFrame frame = new JFrame(title);
@@ -195,12 +195,12 @@ public class Conway extends Automaton {
         frame.pack();
         frame.setVisible(true);
         game.mainloop();
+        */
         
-        /*
         String title = "Conway's Game of Life";
         Conway game = new Conway("pulsar.cells", 2);
         game.run(title, 2);
-        */
+        
     }
 
 }
