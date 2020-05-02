@@ -8,8 +8,15 @@ public class TimeClient {
         
         System.out.println(time);
 
+        Time newTime = new Time(9, 30, 0.0);
+        //System.out.println(Time.printTime(time1)); // CANNOT DO 
+        Time.printTime(newTime);
+        System.out.println(newTime);
+
         // cannot access private variables from another class
         // System.out.println(time.hour);
+
+
 
         String s = time.toString();
         System.out.println(s);
