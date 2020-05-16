@@ -22,6 +22,7 @@ public class Exercise6
     public static void main(String args[])
     {
         // Try for instance beknow, bijoux, biopsy
+        // Feel free to try out different words...
         System.out.println(isAbecedarian("bent"));
         System.out.println(isAbecedarian("blue"));
 
